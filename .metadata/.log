@@ -2674,3 +2674,27 @@ java.lang.Error: new JTextArea()
 	at org.eclipse.equinox.launcher.Main.run(Main.java:1465)
 	at org.eclipse.equinox.launcher.Main.main(Main.java:1438)
 Caused by: java.lang.NullPointerException
+
+!ENTRY org.eclipse.core.net 1 0 2014-07-22 13:06:43.217
+!MESSAGE System property http.proxyHost is set to 172.16.0.10 but should not be set.
+
+!ENTRY org.eclipse.core.net 1 0 2014-07-22 13:06:43.217
+!MESSAGE System property http.proxyPort is set to 3128 but should not be set.
+
+!ENTRY org.eclipse.core.net 1 0 2014-07-22 13:06:43.218
+!MESSAGE System property https.proxyHost is set to 172.16.0.10 but should not be set.
+
+!ENTRY org.eclipse.core.net 1 0 2014-07-22 13:06:43.218
+!MESSAGE System property https.proxyPort is set to 3128 but should not be set.
+
+!ENTRY org.eclipse.core.net 1 0 2014-07-22 13:06:50.666
+!MESSAGE System property http.proxyHost is set to 172.16.0.10 but should not be set.
+
+!ENTRY org.eclipse.core.net 1 0 2014-07-22 13:06:50.666
+!MESSAGE System property http.proxyPort is set to 3128 but should not be set.
+
+!ENTRY org.eclipse.core.net 1 0 2014-07-22 13:06:50.667
+!MESSAGE System property https.proxyHost is set to 172.16.0.10 but should not be set.
+
+!ENTRY org.eclipse.core.net 1 0 2014-07-22 13:06:50.667
+!MESSAGE System property https.proxyPort is set to 3128 but should not be set.

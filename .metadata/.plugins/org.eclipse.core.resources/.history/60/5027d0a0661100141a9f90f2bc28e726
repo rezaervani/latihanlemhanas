@@ -7,10 +7,8 @@ import java.sql.SQLException;
 import java.sql.Statement;
 
 public class KoneksiDatabase {
-	Connection conn = null;
-	   Statement stmt = null;
+	
 	ResultSet rsst = null;
-	  String sqlquery;
 	int id;
 	
 	public KoneksiDatabase(String a, String b) {
@@ -21,7 +19,8 @@ public class KoneksiDatabase {
 	   final String USER = "root";
 	   final String PASS = "Komlek123";
 	   
-	   
+	   Connection conn = null;
+	   Statement stmt = null;
 	   
 	   try{
 	      //STEP 2: Register JDBC driver
@@ -33,7 +32,7 @@ public class KoneksiDatabase {
 	      System.out.println("Koneksi Sukses");
 	      
 	      stmt = conn.createStatement();
-	    
+	      String sqlquery;
 	      sqlquery = "SELECT * FROM data";
 	      
 	      
