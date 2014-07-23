@@ -49,7 +49,7 @@ public class FormInput extends JFrame {
 	 */
 	public FormInput() {
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-		setBounds(100, 100, 450, 531);
+		setBounds(100, 100, 450, 300);
 		contentPane = new JPanel();
 		contentPane.setBorder(new EmptyBorder(5, 5, 5, 5));
 		setContentPane(contentPane);
@@ -83,11 +83,11 @@ public class FormInput extends JFrame {
 		JPanel panel = new JPanel();
 		panel.add(table, BorderLayout.CENTER);
 		panel.add(table.getTableHeader(), BorderLayout.PAGE_START);
-		panel.setBounds(29, 197, 382, 296);
+		panel.setBounds(29, 197, 382, 46);
 		contentPane.add(panel);
 		panel.setLayout(null);
 		
-		table.setBounds(0, 0, 382, 293);
+		table.setBounds(0, 0, 382, 46);
 		
 		
 		//tabelnya.addColumn("ID");
@@ -113,11 +113,9 @@ public class FormInput extends JFrame {
 			//	Munculkan[] muncul = new Munculkan[3];
 				
 				 try {
+					   KoneksiDatabase.rsst = KoneksiDatabase.stmt.executeQuery(KoneksiDatabase.sqlquery);
 					   
-					 String sqlquery = "SELECT * FROM data";
-					 KoneksiDatabase.rsst = KoneksiDatabase.stmt.executeQuery(sqlquery);
-					   
-					   while (KoneksiDatabase.rsst.next()) {
+					   KoneksiDatabase.rsst.first();
 					   int id = KoneksiDatabase.rsst.getInt(1);
 					   String nama = KoneksiDatabase.rsst.getString(2);
 					   String alamat = KoneksiDatabase.rsst.getString(3);
@@ -127,7 +125,7 @@ public class FormInput extends JFrame {
 				//dataku.add(new Munculkan(Munculkan.id, Munculkan.nama, Munculkan.alamat));
 				
 				tabelnya.insertRow(0, new Object[]{id, nama, alamat});
-					   }
+				
 				 } catch (SQLException sqle) {
 				 }
 				 }

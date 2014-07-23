@@ -2894,3 +2894,15 @@ java.lang.Error: new JTable(tabelnya)
 	at org.eclipse.equinox.launcher.Main.run(Main.java:1465)
 	at org.eclipse.equinox.launcher.Main.main(Main.java:1438)
 Caused by: java.lang.NullPointerException
+
+!ENTRY org.eclipse.core.net 1 0 2014-07-23 09:08:21.862
+!MESSAGE System property http.proxyHost is set to 172.16.0.10 but should not be set.
+
+!ENTRY org.eclipse.core.net 1 0 2014-07-23 09:08:21.862
+!MESSAGE System property http.proxyPort is set to 3128 but should not be set.
+
+!ENTRY org.eclipse.core.net 1 0 2014-07-23 09:08:21.862
+!MESSAGE System property https.proxyHost is set to 172.16.0.10 but should not be set.
+
+!ENTRY org.eclipse.core.net 1 0 2014-07-23 09:08:21.863
+!MESSAGE System property https.proxyPort is set to 3128 but should not be set.

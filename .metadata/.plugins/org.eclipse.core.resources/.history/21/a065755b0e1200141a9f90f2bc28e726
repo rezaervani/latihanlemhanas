@@ -12,13 +12,10 @@ public class Munculkan {
 	   
 	   try {
 	   KoneksiDatabase.rsst = KoneksiDatabase.stmt.executeQuery(KoneksiDatabase.sqlquery);
-	   
-	   KoneksiDatabase.rsst.next();
-	   id = KoneksiDatabase.rsst.getInt(1);
-	   nama = KoneksiDatabase.rsst.getString(2);
-	   alamat = KoneksiDatabase.rsst.getString(3);
-		   
-		   
+	   KoneksiDatabase.rsst.last();
+		   id = KoneksiDatabase.rsst.getInt(1);
+		   nama = KoneksiDatabase.rsst.getString(2);
+		   alamat = KoneksiDatabase.rsst.getString(3);
  	  	    	  	    	  
  	//  System.out.println("No :" + id);
  	// System.out.println("Nama :" + nama);

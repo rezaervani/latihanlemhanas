@@ -33,22 +33,18 @@ public class KoneksiDatabase {
 	      conn = DriverManager.getConnection(DB_URL,USER,PASS);
 	      System.out.println("Koneksi Suks");
 	      
-	      String sqlawal = "SELECT * FROM datapeserta";
-	      // stmt.executeQuery(sqlquery); // salah
-	      stmt = conn.prepareStatement(sqlawal);
-	      
-	      //String sqllagi = "SELECT * FROM datapeserta";
-	      //stmt.executeQuery(sqllagi);
+	      stmt = conn.prepareStatement();
 	    
-	      	
-	            
-	     // String datanamabaru = a;
-	     // String dataalamatbaru = b;
+	      sqlquery = "SELECT * FROM data";
+	      
+	      
+	      String datanamabaru = a;
+	      String dataalamatbaru = b;
 	      
 	      // Contoh INSERT data ke database
-	      //String insertquery;
-	      //insertquery = "INSERT INTO data (nama, alamat) VALUES (\"" +  datanamabaru + "\" , \"" + dataalamatbaru + "\")";
-	      //stmt.executeUpdate(insertquery);
+	      String insertquery;
+	      insertquery = "INSERT INTO data (nama, alamat) VALUES (\"" +  datanamabaru + "\" , \"" + dataalamatbaru + "\")";
+	      stmt.executeUpdate(insertquery);
 	      System.out.println("Penambahan Data Sukses");
 	      
 	      

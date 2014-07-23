@@ -15,7 +15,6 @@ import javax.swing.JButton;
 import java.awt.event.MouseAdapter;
 import java.awt.event.MouseEvent;
 import java.awt.Color;
-import java.sql.SQLException;
 import java.util.ArrayList;
 
 import javax.swing.JTable;
@@ -49,7 +48,7 @@ public class FormInput extends JFrame {
 	 */
 	public FormInput() {
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-		setBounds(100, 100, 450, 531);
+		setBounds(100, 100, 450, 300);
 		contentPane = new JPanel();
 		contentPane.setBorder(new EmptyBorder(5, 5, 5, 5));
 		setContentPane(contentPane);
@@ -83,11 +82,11 @@ public class FormInput extends JFrame {
 		JPanel panel = new JPanel();
 		panel.add(table, BorderLayout.CENTER);
 		panel.add(table.getTableHeader(), BorderLayout.PAGE_START);
-		panel.setBounds(29, 197, 382, 296);
+		panel.setBounds(29, 197, 382, 46);
 		contentPane.add(panel);
 		panel.setLayout(null);
 		
-		table.setBounds(0, 0, 382, 293);
+		table.setBounds(0, 0, 382, 46);
 		
 		
 		//tabelnya.addColumn("ID");
@@ -110,27 +109,15 @@ public class FormInput extends JFrame {
 				alamatbaru = textArea.getText();
 				new KoneksiDatabase(namabaru, alamatbaru);
 				
-			//	Munculkan[] muncul = new Munculkan[3];
-				
-				 try {
-					   
-					 String sqlquery = "SELECT * FROM data";
-					 KoneksiDatabase.rsst = KoneksiDatabase.stmt.executeQuery(sqlquery);
-					   
-					   while (KoneksiDatabase.rsst.next()) {
-					   int id = KoneksiDatabase.rsst.getInt(1);
-					   String nama = KoneksiDatabase.rsst.getString(2);
-					   String alamat = KoneksiDatabase.rsst.getString(3);
+				Munculkan[] muncul = new Munculkan[3];
 				
 				
 				//ArrayList<Munculkan> dataku = new ArrayList<Munculkan>();
 				//dataku.add(new Munculkan(Munculkan.id, Munculkan.nama, Munculkan.alamat));
 				
 				tabelnya.insertRow(0, new Object[]{id, nama, alamat});
-					   }
-				 } catch (SQLException sqle) {
-				 }
-				 }
+				
+			}
 		});
 		btnNewButton.setBounds(267, 137, 91, 23);
 		contentPane.add(btnNewButton);

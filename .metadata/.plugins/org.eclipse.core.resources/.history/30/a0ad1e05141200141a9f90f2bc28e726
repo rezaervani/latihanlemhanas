@@ -113,9 +113,7 @@ public class FormInput extends JFrame {
 			//	Munculkan[] muncul = new Munculkan[3];
 				
 				 try {
-					   
-					 String sqlquery = "SELECT * FROM data";
-					 KoneksiDatabase.rsst = KoneksiDatabase.stmt.executeQuery(sqlquery);
+					   KoneksiDatabase.rsst = KoneksiDatabase.stmt.executeQuery(KoneksiDatabase.sqlquery);
 					   
 					   while (KoneksiDatabase.rsst.next()) {
 					   int id = KoneksiDatabase.rsst.getInt(1);

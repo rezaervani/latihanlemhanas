@@ -13,7 +13,7 @@ public class Munculkan {
 	   try {
 	   KoneksiDatabase.rsst = KoneksiDatabase.stmt.executeQuery(KoneksiDatabase.sqlquery);
 	   
-	   KoneksiDatabase.rsst.next();
+	   KoneksiDatabase.rsst.first();
 	   id = KoneksiDatabase.rsst.getInt(1);
 	   nama = KoneksiDatabase.rsst.getString(2);
 	   alamat = KoneksiDatabase.rsst.getString(3);

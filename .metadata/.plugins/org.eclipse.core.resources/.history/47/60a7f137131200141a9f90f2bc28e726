@@ -33,14 +33,12 @@ public class KoneksiDatabase {
 	      conn = DriverManager.getConnection(DB_URL,USER,PASS);
 	      System.out.println("Koneksi Suks");
 	      
-	      String sqlawal = "SELECT * FROM datapeserta";
-	      // stmt.executeQuery(sqlquery); // salah
-	      stmt = conn.prepareStatement(sqlawal);
+	      sqlquery = "SELECT * FROM data";
+	      stmt = conn.prepareStatement(sqlquery);
 	      
-	      //String sqllagi = "SELECT * FROM datapeserta";
-	      //stmt.executeQuery(sqllagi);
+	      String sqllagi = "SELECT * FROM datapeserta"
+	      stmt.executeQuery(sqllagi);
 	    
-	      	
 	            
 	     // String datanamabaru = a;
 	     // String dataalamatbaru = b;
