@@ -1,0 +1,31 @@
+package id.go.lemhannas.latihandatabase;
+
+import java.sql.SQLException;
+
+public class Munculkan {
+
+	public int id;
+	   public String nama;
+	   public String alamat;
+	   
+	   public void munculkanid() {
+	   
+	   try {
+	   KoneksiDatabase.rsst = stmt.executeQuery(sqlquery);
+    while (rsst.next()) {
+ 	  id = rsst.getInt(1);
+ 	  String nama = rsst.getString(2);
+       String alamat = rsst.getString(3);
+ 	  	    	  	    	  
+ 	//  System.out.println("No :" + id);
+ 	// System.out.println("Nama :" + nama);
+ 	// System.out.println("Alamat :" + alamat);
+ 	  
+   //}
+   
+   }
+	
+	   } catch (SQLException sqle) {
+		   
+	   }
+}

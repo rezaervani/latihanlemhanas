@@ -7,10 +7,10 @@ import java.sql.SQLException;
 import java.sql.Statement;
 
 public class KoneksiDatabase {
-	Connection conn = null;
-	   Statement stmt = null;
-	ResultSet rsst = null;
-	  String sqlquery;
+	public static Connection conn = null;
+	public static Statement stmt = null;
+	public static ResultSet rsst = null;
+	public static String sqlquery;
 	int id;
 	
 	public KoneksiDatabase(String a, String b) {
@@ -55,26 +55,8 @@ public class KoneksiDatabase {
 	   }
 	}
 	   
-	   public int munculkan() {
-		   rsst = stmt.executeQuery(sqlquery);
-	      while (rsst.next()) {
-	    	  id = rsst.getInt(1);
-	    	  String nama = rsst.getString(2);
-	          String alamat = rsst.getString(3);
-	    	  
-	    	  
-	    	  
-	    	//  System.out.println("No :" + id);
-	    	 // System.out.println("Nama :" + nama);
-	    	 // System.out.println("Alamat :" + alamat);
-	    	  
-	      //}
-	      
-	      }
-		return id;
-	  
-		   }
-	   }
+	 
+}
 	   
 
 

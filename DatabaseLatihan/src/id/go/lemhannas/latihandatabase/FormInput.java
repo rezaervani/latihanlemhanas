@@ -15,6 +15,8 @@ import javax.swing.JButton;
 import java.awt.event.MouseAdapter;
 import java.awt.event.MouseEvent;
 import java.awt.Color;
+import java.util.ArrayList;
+
 import javax.swing.JTable;
 
 public class FormInput extends JFrame {
@@ -77,12 +79,25 @@ public class FormInput extends JFrame {
 		
 		DefaultTableModel tabelnya = new DefaultTableModel();
 		table = new JTable(tabelnya);
-		table.setBounds(29, 197, 382, 46);
-		contentPane.add(table);
+		JPanel panel = new JPanel();
+		panel.add(table, BorderLayout.CENTER);
+		panel.add(table.getTableHeader(), BorderLayout.PAGE_START);
+		panel.setBounds(29, 197, 382, 46);
+		contentPane.add(panel);
+		panel.setLayout(null);
+		
+		table.setBounds(0, 0, 382, 46);
+		
+		
+		//tabelnya.addColumn("ID");
+		//tabelnya.addColumn("Nama");
+		//tabelnya.addColumn("Alamat");
 		
 		tabelnya.addColumn("ID");
 		tabelnya.addColumn("Nama");
 		tabelnya.addColumn("Alamat");
+		
+		// tabelnya.insertRow(0, new Object[]{rsst.getInt(1), rsst.getString(2), rsst.getString(3)});
 		
 		
 		JButton btnNewButton = new JButton("UPDATE DATA");
@@ -93,6 +108,16 @@ public class FormInput extends JFrame {
 				namabaru = textField.getText();
 				alamatbaru = textArea.getText();
 				new KoneksiDatabase(namabaru, alamatbaru);
+				
+				Munculkan[] muncul = new Munculkan[3];
+				
+				//ArrayList<Munculkan> dataku = new ArrayList<Munculkan>();
+				//dataku.add(new Munculkan(Munculkan.id, Munculkan.nama, Munculkan.alamat));
+				
+				
+				
+				tabelnya.insertRow(0, new Object[]{muncul[0], muncul[1], muncul[2]});
+				
 			}
 		});
 		btnNewButton.setBounds(267, 137, 91, 23);
